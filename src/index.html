@@ -3,7 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
-<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0" >
+
+<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0">
   <div id="App"></div>
 </body>
 
@@ -15,9 +16,10 @@ import {AppContainer} from 'react-hot-loader';
 const render = () => {
   const App = require('./app').default;
   ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
-}
+};
 
 render();
+
 if (module.hot) {
   module.hot.accept(render);
 }

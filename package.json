@@ -1,8 +1,11 @@
 {
   "name": "temple",
   "productName": "temple",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "0.1.0",
+  "description": "Helper for on-the-fly template search-and-copy while coding",
+  "author": "cooperka",
+  "license": "MIT",
+  "keywords": [],
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -11,9 +14,6 @@
     "publish": "electron-forge publish",
     "lint": "eslint --cache --color --ext .jsx,.js src"
   },
-  "keywords": [],
-  "author": "kevin",
-  "license": "MIT",
   "config": {
     "forge": {
       "make_targets": {
@@ -37,8 +37,8 @@
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
       "github_repository": {
-        "owner": "",
-        "name": ""
+        "owner": "cooperka",
+        "name": "temple"
       },
       "windowsStoreConfig": {
         "packageName": "",
