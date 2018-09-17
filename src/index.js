@@ -13,6 +13,11 @@ const isDevMode = process.execPath.match(/[\\/]electron/);
 if (isDevMode) enableLiveReload({ strategy: 'react-hmr' });
 
 async function handleReady() {
+  if (isDevMode) {
+    // Show the window immediately.
+    await focusWindow();
+  }
+
   createTray();
 
   registerShortcut();
