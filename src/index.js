@@ -2,6 +2,7 @@ import path from 'path';
 import { app, BrowserWindow, Tray, Menu, globalShortcut } from 'electron';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
+import AutoLaunch from 'auto-launch';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -21,6 +22,8 @@ async function handleReady() {
   createTray();
 
   registerShortcut();
+
+  registerAutoLaunch();
 }
 
 async function createWindow() {
@@ -59,6 +62,13 @@ function createTray() {
 
 function registerShortcut() {
   globalShortcut.register('CmdOrCtrl+Alt+Shift+Space', focusWindow);
+}
+
+function registerAutoLaunch() {
+  const autoLauncher = new AutoLaunch({
+    name: 'Temple',
+  });
+  autoLauncher.enable();
 }
 
 async function focusWindow() {
