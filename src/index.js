@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, globalShortcut } from 'electron';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
 
@@ -12,6 +12,8 @@ if (isDevMode) enableLiveReload({ strategy: 'react-hmr' });
 
 async function handleReady() {
   await createWindow();
+
+  registerShortcut();
 }
 
 async function createWindow() {
@@ -32,6 +34,12 @@ async function createWindow() {
     // Dereference the window object; usually you would store windows
     // in an array if your app supports multi windows.
     mainWindow = null;
+  });
+}
+
+function registerShortcut() {
+  globalShortcut.register('CmdOrCtrl+Alt+Shift+Space', () => {
+    mainWindow.focus();
   });
 }
 
