@@ -27,7 +27,7 @@ It's built with React and will hot-reload when editing files.
 Generate a platform-specific Electron application, e.g. for Ubuntu:
 
 ```bash
-electron-forge make --targets=deb
+yarn run make --targets=deb
 ```
 
 Run the newly packaged app, e.g. on Ubuntu:
