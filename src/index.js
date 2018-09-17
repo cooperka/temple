@@ -1,10 +1,12 @@
-import { app, BrowserWindow, globalShortcut } from 'electron';
+import path from 'path';
+import { app, BrowserWindow, Tray, Menu, globalShortcut } from 'electron';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+let tray;
 
 const isDevMode = process.execPath.match(/[\\/]electron/);
 
@@ -12,6 +14,8 @@ if (isDevMode) enableLiveReload({ strategy: 'react-hmr' });
 
 async function handleReady() {
   await createWindow();
+
+  createTray();
 
   registerShortcut();
 }
@@ -37,10 +41,26 @@ async function createWindow() {
   });
 }
 
+function createTray() {
+  const iconPath = path.join(__dirname, 'images/icon.png');
+  tray = new Tray(iconPath);
+
+  const contextMenu = Menu.buildFromTemplate([
+    { label: 'Focus', click: focusWindow },
+  ]);
+  tray.setContextMenu(contextMenu);
+
+  tray.setToolTip('Temple');
+}
+
 function registerShortcut() {
   globalShortcut.register('CmdOrCtrl+Alt+Shift+Space', () => {
-    mainWindow.focus();
+    focusWindow();
   });
+}
+
+function focusWindow() {
+  mainWindow.focus();
 }
 
 function handleAllClosed() {
