@@ -1,6 +1,8 @@
 {
   "extends": "cooperka/react",
 
+  "parser": "babel-eslint",
+
   "env": {
     "browser": true,
     "jest": true
