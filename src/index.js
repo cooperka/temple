@@ -16,8 +16,8 @@ async function handleReady() {
 
 async function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 320,
   });
 
   mainWindow.loadURL(`file://${__dirname}/index.html`);
