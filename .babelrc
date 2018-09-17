@@ -1,6 +1,3 @@
 {
-  "presets": [
-    "env",
-    "react"
-  ]
+  "extends": "./.compilerc"
 }
