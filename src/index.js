@@ -45,6 +45,7 @@ function createTray() {
 
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Focus', click: focusWindow },
+    { label: 'Quit', click: quit },
   ]);
   tray.setContextMenu(contextMenu);
 
@@ -64,11 +65,7 @@ async function focusWindow() {
 }
 
 function handleAllClosed() {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q.
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  // No-op; remain in tray.
 }
 
 function handleActivate() {
@@ -77,6 +74,10 @@ function handleActivate() {
   if (mainWindow === null) {
     createWindow();
   }
+}
+
+function quit() {
+  app.quit();
 }
 
 app.on('ready', handleReady);
