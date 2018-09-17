@@ -9,14 +9,32 @@ Features:
 
 ## Development
 
-Download the codebase, build, and launch the app:
+See the [Electron Forge docs](https://electronforge.io/cli/install) for more info on the below commands.
+
+### Get started
+
+Download this codebase, build, and launch the app:
 
 ```bash
 yarn global add electron-forge
 electron-forge install cooperka/temple
 ```
 
-See Electron Forge docs [here](https://electronforge.io/cli/install) for more info.
+It's built with React and will hot-reload when editing files.
+
+### Release
+
+Generate a platform-specific Electron application, e.g. for Ubuntu:
+
+```bash
+electron-forge make --targets=deb
+```
+
+Run the newly packaged app, e.g. on Ubuntu:
+
+```bash
+./out/temple-linux-x64/temple
+```
 
 ## Credits
 
