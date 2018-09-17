@@ -13,8 +13,6 @@ const isDevMode = process.execPath.match(/[\\/]electron/);
 if (isDevMode) enableLiveReload({ strategy: 'react-hmr' });
 
 async function handleReady() {
-  await createWindow();
-
   createTray();
 
   registerShortcut();
@@ -54,13 +52,15 @@ function createTray() {
 }
 
 function registerShortcut() {
-  globalShortcut.register('CmdOrCtrl+Alt+Shift+Space', () => {
-    focusWindow();
-  });
+  globalShortcut.register('CmdOrCtrl+Alt+Shift+Space', focusWindow);
 }
 
-function focusWindow() {
-  mainWindow.focus();
+async function focusWindow() {
+  if (mainWindow) {
+    mainWindow.focus();
+  } else {
+    await createWindow();
+  }
 }
 
 function handleAllClosed() {
