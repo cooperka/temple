@@ -23,7 +23,9 @@ async function handleReady() {
 
   registerShortcut();
 
-  registerAutoLaunch();
+  if (!isDevMode) {
+    registerAutoLaunch();
+  }
 }
 
 async function createWindow() {
