@@ -15,6 +15,12 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/out/"
+    ]
+  },
   "config": {
     "forge": {
       "make_targets": {
