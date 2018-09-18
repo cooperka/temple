@@ -2,14 +2,36 @@
 
 exports[`renders as expected 1`] = `
 <div>
-  <h2>
+  <h2
+    className="MuiTypography-root-1 MuiTypography-title-7"
+  >
     Temple
   </h2>
   <button
+    className="MuiButtonBase-root-62 MuiButton-root-36 MuiButton-text-38 MuiButton-flat-41"
+    disabled={false}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
     type="button"
   >
-    Copy stuff
+    <span
+      className="MuiButton-label-37"
+    >
+      Copy stuff
+    </span>
+    <span
+      className="MuiTouchRipple-root-65"
+    />
   </button>
 </div>
 `;

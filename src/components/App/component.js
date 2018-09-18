@@ -1,5 +1,6 @@
 import { clipboard } from 'electron';
 import React, { Component } from 'react';
+import { Typography, Button } from '@material-ui/core';
 
 export default class App extends Component {
 
@@ -10,10 +11,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h2>Temple</h2>
-        <button type="button" onClick={this.copyText}>
+        <Typography variant="title">Temple</Typography>
+        <Button
+          onClick={this.copyText}
+        >
           Copy stuff
-        </button>
+        </Button>
       </div>
     );
   }
