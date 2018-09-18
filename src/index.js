@@ -32,6 +32,7 @@ async function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 320,
+    frame: false,
   });
 
   mainWindow.loadURL(`file://${__dirname}/index.html`);

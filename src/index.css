@@ -1,0 +1,9 @@
+body {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0;
+
+  /* Allow dragging from any area. */
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}

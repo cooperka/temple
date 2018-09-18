@@ -3,10 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 </head>
 
-<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0">
+<body>
   <div id="App"></div>
 </body>
 
@@ -17,7 +18,12 @@
 
   const render = () => {
     const App = require('./components/App/component').default;
-    ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
+    ReactDOM.render(
+      <AppContainer>
+        <App />
+      </AppContainer>,
+      document.getElementById('App'),
+    );
   };
 
   render();
