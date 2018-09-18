@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 </head>
 
 <body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0">
@@ -9,19 +11,19 @@
 </body>
 
 <script type="text/jsx">
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {AppContainer} from 'react-hot-loader';
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import {AppContainer} from 'react-hot-loader';
 
-const render = () => {
-  const App = require('./components/App/component').default;
-  ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
-};
+  const render = () => {
+    const App = require('./components/App/component').default;
+    ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
+  };
 
-render();
+  render();
 
-if (module.hot) {
-  module.hot.accept(render);
-}
+  if (module.hot) {
+    module.hot.accept(render);
+  }
 </script>
 </html>
