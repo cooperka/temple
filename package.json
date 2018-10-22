@@ -59,6 +59,7 @@
     "electron-compile": "6.4.3",
     "electron-devtools-installer": "2.2.4",
     "electron-squirrel-startup": "1.0.0",
+    "ramda": "0.25.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-hot-loader": "4.3.11"
