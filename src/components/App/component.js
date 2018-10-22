@@ -2,7 +2,7 @@ import { clipboard } from 'electron';
 import React, { Component } from 'react';
 import { Typography, Button } from '@material-ui/core';
 
-export default class App extends Component {
+class App extends Component {
 
   copyText = () => {
     clipboard.writeText('test');
@@ -22,3 +22,5 @@ export default class App extends Component {
   }
 
 }
+
+export default App;
