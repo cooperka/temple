@@ -9,8 +9,11 @@
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
-    "lint": "eslint --cache --color --ext .jsx,.js src",
+    "checkAll": "yarn run lint --fix && yarn run flow && yarn run test --updateSnapshot --watchAll=0",
+    "lint": "eslint . --ext .js",
+    "flow": "echo 'Flow not yet enabled.'",
     "test": "jest",
+    "clean": "rm -rf out",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish"
