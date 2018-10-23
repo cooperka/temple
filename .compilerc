@@ -4,7 +4,8 @@
       "application/javascript": {
         "presets": [
           ["env", { "targets": { "electron": "1.6.0" } }],
-          "react"
+          "react",
+          "flow"
         ],
         "plugins": [
           "transform-async-to-generator",
@@ -18,7 +19,8 @@
     "test": {
       "presets": [
         ["env", { "targets": { "electron": "1.6.0" } }],
-        "react"
+        "react",
+        "flow"
       ],
       "plugins": [
         "transform-async-to-generator",
@@ -32,7 +34,8 @@
       "application/javascript": {
         "presets": [
           ["env", { "targets": { "electron": "1.6.0" } }],
-          "react"
+          "react",
+          "flow"
         ],
         "plugins": [
           "transform-async-to-generator",

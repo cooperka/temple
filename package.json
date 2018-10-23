@@ -11,7 +11,7 @@
     "start": "electron-forge start",
     "checkAll": "yarn run lint --fix && yarn run flow && yarn run test --updateSnapshot --watchAll=0",
     "lint": "eslint . --ext .js",
-    "flow": "echo 'Flow not yet enabled.'",
+    "flow": "flow",
     "test": "jest",
     "clean": "rm -rf out",
     "package": "electron-forge package",
@@ -68,12 +68,14 @@
     "react-hot-loader": "4.3.11"
   },
   "devDependencies": {
+    "babel-cli": "6.26.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
     "babel-plugin-transform-async-to-generator": "6.24.1",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-es2015-classes": "6.24.1",
     "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "6.23.0",
     "babel-preset-react": "6.24.1",
     "electron-forge": "5.2.2",
     "electron-prebuilt-compile": "3.0.2",
@@ -83,6 +85,7 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
+    "flow-bin": "0.83.0",
     "jest": "23.6.0",
     "react-test-renderer": "16.5.2"
   }
