@@ -1,3 +1,5 @@
+// @flow
+
 import path from 'path';
 import { app, BrowserWindow, Tray, Menu, globalShortcut } from 'electron';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';

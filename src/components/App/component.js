@@ -1,9 +1,14 @@
+// @flow
+
 import * as R from 'ramda';
 import { clipboard } from 'electron';
 import React, { Component } from 'react';
 import { withStyles, Typography, Button } from '@material-ui/core';
 
-class App extends Component {
+type Props = {
+};
+
+class App extends Component<Props> {
 
   copyText = () => {
     clipboard.writeText('test');
