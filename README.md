@@ -1,5 +1,7 @@
 # Temple
 
+[![Build status](https://travis-ci.org/cooperka/Temple.svg?branch=master)](https://travis-ci.org/cooperka/Temple)
+
 Helper for on-the-fly search-and-copy while coding.
 Like GitHub "gists" but instantly available to your clipboard -- from single lines to whole files. Context aware.
 
