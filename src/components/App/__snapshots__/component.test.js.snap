@@ -8,11 +8,10 @@ exports[`renders as expected 1`] = `
     Temple
   </h2>
   <button
-    className="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-text-39 MuiButton-flat-42"
+    className="MuiButtonBase-root-62 MuiButton-root-36 MuiButton-text-38 MuiButton-flat-41"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -26,12 +25,12 @@ exports[`renders as expected 1`] = `
     type="button"
   >
     <span
-      className="MuiButton-label-38"
+      className="MuiButton-label-37"
     >
       Copy stuff
     </span>
     <span
-      className="MuiTouchRipple-root-66"
+      className="MuiTouchRipple-root-65"
     />
   </button>
 </div>
